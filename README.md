@@ -21,13 +21,18 @@ GitHub Actions (daily, 6am PT)
 ## Setup
 
 1. Fork / clone this repo.
-2. Add your model API key as a repository secret named `AI_API_KEY`
-   (Settings → Secrets and variables → Actions).
-3. Optional secrets: `AI_API_BASE` (default `https://api.deepseek.com`),
-   `AI_MODEL` (default `deepseek-chat`). Any OpenAI-compatible endpoint works —
-   e.g. Zhipu's GLM API for `glm-5.3`.
-4. The workflow runs on schedule, or trigger it manually from the Actions tab
-   (`workflow_dispatch`).
+2. Get an API key from any OpenAI-compatible provider:
+   - **DeepSeek**: https://platform.deepseek.com → API keys. Model: `deepseek-chat`.
+   - **Zhipu (智谱)**: https://open.bigmodel.cn → API keys. Model: `glm-5.3`.
+3. Save the key as a repository secret named `AI_API_KEY`:
+   repo page → Settings → Secrets and variables → Actions → New repository secret.
+   Name it exactly `AI_API_KEY` and paste the key as the value. The key never
+   appears in code or logs — Actions injects it only at runtime.
+4. Optional secrets: `AI_API_BASE` (default `https://api.deepseek.com`; for Zhipu
+   use `https://open.bigmodel.cn/api/paas/v4`), `AI_MODEL` (default `deepseek-chat`;
+   for Zhipu use `glm-5.3`).
+5. Done — the workflow runs every day at 6am PT. Trigger a run manually anytime
+   from the Actions tab (`workflow_dispatch`).
 
 No API key? `python agent/generate.py --dry-run` prints the prompt it *would*
 send, so you can paste it into any chat model by hand.
