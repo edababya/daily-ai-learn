@@ -1,0 +1,30 @@
+Mixture-of-Experts (MoE) routing — why only a few experts fire per token
+KV cache — why long context is expensive and how it shapes pricing
+Speculative decoding — how small draft models make big models faster
+RLHF vs RLAIF vs DPO — three ways to align a model, and their trade-offs
+Quantization (INT8/INT4) — what you lose when you shrink a model
+Attention variants: MHA vs GQA vs MLA — why memory bandwidth rules inference
+Post-training: SFT then RL — where model behavior is actually shaped
+Inference economics — what a dollar per million tokens really pays for
+Tool use / function calling — how agents reliably call APIs
+RAG vs long context — when to retrieve and when to just stuff the prompt
+World models — learning a simulator of reality inside the weights
+Diffusion vs autoregressive video models — two paths to generated video
+MCP (Model Context Protocol) — the USB-C port for agent tooling
+Evals — why benchmarks saturate and what replaces them
+Data centers — power, not GPUs, is the binding constraint
+HBM and memory bandwidth — the real bottleneck in serving LLMs
+Test-time compute scaling — spending FLOPs at inference instead of training
+Distillation — how small models inherit ability from big ones
+Agent scaffolding: the ReAct loop — reason, act, observe, repeat
+Memory for agents — episodic vs semantic, and what actually works
+Embodied AI: VLA models — vision, language, action in one policy
+Sim-to-real transfer — why robots train in video games first
+Tokenizers: BPE — why models see text in chunks, not words
+GPU utilization (MFU) — the metric behind every inference price
+Interconnect: NVLink vs Ethernet — how GPUs talk changes everything
+Reasoning models — what chain-of-thought supervision actually teaches
+Prompt caching — the cheapest latency win most people ignore
+Multi-agent systems — when many agents beat one, and when they don't
+Open weights vs open source — why the license matters more than the weights
+Mixture-of-depth — spending compute only on tokens that need it
